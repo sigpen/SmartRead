@@ -1,0 +1,6 @@
+*.cmd
+*.jpg
+*.jpeg
+*.png
+db.sqlite3
+*.sqlite
