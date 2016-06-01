@@ -13,11 +13,11 @@ from . import models
 class SmartReadTestCase(TestCase):
     def test_smartread(self):
         cats = [models.Category('cat #{}'.format(i+1) for i in range(10))]
-        cats = [models.Category('cat #{}'.format(i+1) for i in range(10))]
+        #cats = [models.NewsSource('cat #{}'.format(i+1) for i in range(10))]
 
         n = 12
         for i in range(n):
-            o = models.Article(
+            o = models.Category(
 
                 title="SmartRead #{}".format(i + 1),
 
