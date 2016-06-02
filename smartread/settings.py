@@ -20,7 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f8nbru9epzv%pdcotryypdy7%h8xe217*wq#_=*_c7($at!@2r'
+
+SECRET_KEY = 'o&-wj9uf+ft-#hy@@93#9f&3h59z+8y6nb!gb$kicu2@_x&3=l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'newsread',
+    'bootstrap3',
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -120,6 +124,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "images")
+MEDIA_ROOT = os.path.join(BASE_DIR, "images")  # where to put uploads
 MEDIA_URL = "/images/"
-

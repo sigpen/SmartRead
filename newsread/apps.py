@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class NewsreadConfig(AppConfig):
+class NwesreadConfig(AppConfig):
     name = 'newsread'

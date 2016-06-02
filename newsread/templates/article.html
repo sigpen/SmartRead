@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+    <h1>{{ object_list.object.source }}</h1>
+    {% for object in object_list %}
+        <tr>
+            <td>{{ object.source }}:
+                <a href="{{ object.link }}"> {{ object.headline }} </a></td>
+            <td>{{ object.summary|linebreaks }}</td>
+            <td>{{ object.pub_date|linebreaks }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}

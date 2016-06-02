@@ -1,0 +1,39 @@
+@font-family-sans-serif;
+
+a {
+    color: black;
+}
+
+.sources {
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+    /*padding: 5px;*/
+    /*border-radius: 3px;*/
+}
+
+.img_bar {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 50px;
+
+}
+
+.news-paragraphs {
+    font-family: Sans-Serif;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.navbar-custom {
+    background-color: white;
+}
+.navbar-custom a:active{
+    background-color: grey;
+}
+
+
+.articles {
+    margin-right: 20px;
+}
