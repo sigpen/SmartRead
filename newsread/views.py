@@ -8,7 +8,6 @@ from newsread.models import Article, NewsSource
 
 class NewsSourceView(ListView):
     model = NewsSource
-    template_name = "index.html"
     page_title = "News Source"
 
 # class CategoryView(ListView):
@@ -18,3 +17,8 @@ class NewsSourceView(ListView):
 # class ArticleView(ListView):
 #     model = Article
 #
+
+class IndexView(ListView):
+    source = NewsSource.objects.all()
+    article = Article.objects.all()
+
