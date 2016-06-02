@@ -1,0 +1,21 @@
+
+
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+
+{% block content %}
+    {% for object in object_list %}
+        <img src="{{ MEDIA_URL }}{{ object.image }}"/>
+        <ul>
+            {% for article in object.article_set.all %}
+                <li>
+                    {{ article }}
+                </li>
+            {% endfor %}
+        </ul>
+
+    {% endfor %}
+    <hr>
+{% endblock %}
+

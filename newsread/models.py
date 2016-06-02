@@ -20,8 +20,6 @@ class Category(models.Model):
         return self.title
 
 
-
-
 class Article(models.Model):
     source = models.ForeignKey(NewsSource, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -33,7 +31,6 @@ class Article(models.Model):
 
     def __str__(self):
         return self.headline
-
 
 
 

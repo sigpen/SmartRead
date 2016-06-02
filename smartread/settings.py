@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django_extensions',
-    'newsread'
+    'newsread',
+    'bootstrap3',
 
 ]
 
