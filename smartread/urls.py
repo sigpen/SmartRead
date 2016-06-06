@@ -20,7 +20,7 @@ from django.contrib import admin
 
 urlpatterns = [
 
-    url(r'', include('newsread.urls')),
+    url(r'', include('newsread.urls', namespace='newsread')),
     url(r'^admin/', admin.site.urls),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

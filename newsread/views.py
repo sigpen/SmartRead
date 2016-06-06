@@ -1,18 +1,8 @@
-from django.shortcuts import render
-from django.views.generic import ListView,View
+from django.shortcuts import render, get_object_or_404
+from django.template.context_processors import request
+from django.views.generic import ListView, View
 
-from newsread.models import Article, NewsSource
-
-
-    # so = NewsSource.objects.all()
-    # ar = Article.objects.all()
-
-
-    # def get_context_data(self, **kwargs):
-    #     context = super(BaseView, self).get_context_data(**kwargs)
-    #    for article in Base.objects.all():
-    #        x = Article.objects.all()
-
+from newsread.models import Article, NewsSource, Category
 
 
 class NewsSourceView(ListView):
@@ -21,11 +11,17 @@ class NewsSourceView(ListView):
     page_title = "News Source"
 
 
-
 class ArticleView(ListView):
     model = Article
-    template_name = "article.html"
+    template_name = "news_source.html"
     page_title = "Article"
-#
 
+
+class CustomListView(ListView):
+    model = Article
+    template_name = "custom.html"
+
+    def get_queryset(self):
+        x = self.kwargs['cat']
+        return Article.objects.filter(category__title=x).all()
 

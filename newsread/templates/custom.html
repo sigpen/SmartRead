@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% block content %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+        <link href="{% static 'bootstrap/css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+
+    <div class="news-paragraphs">
+        {% for object in object_list %}
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="row">
+                    <div><img class="sources" src="{{ object.source.image }}"/></div>
+                </div>
+
+                <div class="row article">
+                    <div class="row">
+                        <div><h3><a href="{{ object.link }}"> {{ object.headline }} </a></h3></div>
+                    </div>
+                    <!--<div class="row" style="height: 100px; overflow-y: scroll">-->
+                    <div class="row">
+                        <div>{{ object.summary|linebreaks }}</div>
+                    </div>
+                    <div class="row">
+                        <div>{{ object.pub_date|date:"Y-m-d h:m" }}</div>
+                    </div>
+                </div>
+
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}
+
+</body>
+</html>
