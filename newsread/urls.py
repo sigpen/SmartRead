@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 
-from newsread import views
+from newsread import views, models
 
 appname = 'newsread'
 urlpatterns = [
